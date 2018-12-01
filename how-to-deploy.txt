@@ -1,0 +1,35 @@
+________________________________________________________________________________
+| ~/Desktop/git/forum/client/dist @ tugberks-mbp (tugberkgoc) 
+| => now
+> No existing credentials found. Please log in:
+> We sent an email to tugberkgoc@gmail.com. Please follow the steps provided
+  inside it and make sure the security code matches Witty Humpback Whale.
+✔ Email confirmed
+> Ready! Authentication token and personal details saved in "~/.now"
+________________________________________________________________________________
+| ~/Desktop/git/forum/client/dist @ tugberks-mbp (tugberkgoc) 
+| => now
+> WARN! Your project is missing a now.json file with a `version` property. More: https://zeit.co/docs/version-config
+> Deploying ~/Desktop/git/forum/client/dist under tugberkgoc@gmail.com
+> Synced 5 files (669.59KB) [2s]
+> https://dist-i2l2z5wi1.now.sh [v2] [in clipboard] [12s]
+┌ **        Ready               [7s]
+├── css/chunk-vendors.e470eb84.css
+├── favicon.ico
+├── js/app.f9f20342.js
+├── js/chunk-vendors.cdedfec3.js
+├── js/app.f9f20342.js.map
+├── js/chunk-vendors.cdedfec3.js.map
+├── index.html
+└── css/app.0e433876.css
+> Success! Deployment ready [19s]
+________________________________________________________________________________
+| ~/Desktop/git/forum/client/dist @ tugberks-mbp (tugberkgoc) 
+| => now alias https://dist-i2l2z5wi1.now.sh community-forum
+> Assigning alias community-forum to deployment dist-i2l2z5wi1.now.sh
+> Error! The alias community-forum is a deployment URL or it's in use by a different team.
+________________________________________________________________________________
+| ~/Desktop/git/forum/client/dist @ tugberks-mbp (tugberkgoc) 
+| => now alias https://dist-i2l2z5wi1.now.sh community-forum-tugberk
+> Assigning alias community-forum-tugberk to deployment dist-i2l2z5wi1.now.sh
+> Success! community-forum-tugberk.now.sh now points to dist-i2l2z5wi1.now.sh [4s]

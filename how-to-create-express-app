@@ -1,0 +1,59 @@
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => express --git --no-view .
+
+   create : public/
+   create : public/javascripts/
+   create : public/images/
+   create : public/stylesheets/
+   create : public/stylesheets/style.css
+   create : routes/
+   create : routes/index.js
+   create : routes/users.js
+   create : public/index.html
+   create : .gitignore
+   create : app.js
+   create : package.json
+   create : bin/
+   create : bin/www
+
+   install dependencies:
+     $ npm install
+
+   run the app:
+     $ DEBUG=server:* npm start
+
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm i
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 52 packages from 36 contributors and audited 135 packages in 3.43s
+found 0 vulnerabilities
+
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm start
+
+> server@0.0.0 start /Users/tugberkgoc/Desktop/git/forum/server
+> node ./bin/www
+
+GET / 200 14.473 ms - 176
+GET /stylesheets/style.css 200 3.465 ms - 111
+GET /favicon.ico 404 3.733 ms - 150
+^C
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm i nodemon
+
+> fsevents@1.2.4 install /Users/tugberkgoc/Desktop/git/forum/server/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/tugberkgoc/Desktop/git/forum/server/node_modules/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
+
+> nodemon@1.18.7 postinstall /Users/tugberkgoc/Desktop/git/forum/server/node_modules/nodemon
+> node bin/postinstall || exit 0
+
++ nodemon@1.18.7
+added 285 packages from 146 contributors and audited 2373 packages in 15.526s
+found 0 vulnerabilities
