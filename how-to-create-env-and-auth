@@ -1,0 +1,29 @@
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm i passport-google-oauth20
++ passport-google-oauth20@1.0.0
+added 5 packages from 2 contributors and audited 2379 packages in 4.949s
+found 0 vulnerabilities
+
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm i dotenv
++ dotenv@6.1.0
+added 1 package and audited 2380 packages in 4.133s
+found 0 vulnerabilities
+
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => touch .env
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm i passport
++ passport@0.4.0
+added 2 packages from 2 contributors and audited 2383 packages in 5.353s
+found 0 vulnerabilities
+________________________________________________________________________________
+| ~/Desktop/git/forum/server @ tugberks-mbp (tugberkgoc) 
+| => npm i joi
++ joi@14.3.0
+added 5 packages from 1 contributor and audited 2389 packages in 4.944s
+found 0 vulnerabilities
