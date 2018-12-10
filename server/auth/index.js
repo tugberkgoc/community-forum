@@ -1,9 +1,18 @@
 const passport = require('passport');
 const express = require('express');
+require('../passport/google');
 const { create } = require('./utils')
+
 const router = express.Router();
 
-require('../passport/google');
+router.get('isAdmin', async (req, res) => {
+  if(req.user) {
+    if(req.user.role_id === 3) {
+      return res.json({ isAdmin: true })
+    }
+  }
+  res.json({ isAdmin: false })
+})
 
 router.get('/google',
 	passport.authenticate('google', {
@@ -15,9 +24,11 @@ router.get('/google/callback', (req, res, next) => {
     if (err) { return next(err); }
     try {
       const token = await create(user)
-      res.json({ token });
+      res.redirect(`${process.env.CLIENT_REDIRECT}${token}`)
+      // res.json({ token });
     } catch(error) {
-      next.error();
+      res.redirect(`${process.env.CLIENT_ERROR_REDIRECT}${error.message}`)
+      // next.error();
     }
 	})(req, res, next);
 });

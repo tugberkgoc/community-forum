@@ -6,13 +6,20 @@
 </template>
 
 <script>
-import AppNav from '@/components/AppNav.vue';
+  import {mapActions} from 'vuex'
+  import AppNav from '@/components/AppNav.vue';
 
-export default {
-  components: {
-    AppNav,
-  },
-};
+  export default {
+    components: {
+      AppNav,
+    },
+    mounted() {
+      this.login(localStorage.token)
+    },
+    methods: {
+      ...mapActions(['login']),
+    }
+  };
 </script>
 
 

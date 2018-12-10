@@ -3,6 +3,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const users = require('../queries/user');
 
+const { setAdminIfNotExists } = require('../auth/utils')
+
 /**
  * Only using Sessions: Serialize and Deserialize
  */
@@ -39,6 +41,10 @@ try {
     googleUser.role_id = user.role_id;
     user = await users.update(user.id, googleUser);
   } else {
+    const admins = await users.findAdmins()
+    if(admins.length === 0) {
+      googleUser.role_id = 3;
+    }
     user = await users.insert(googleUser);
   }
   return cb(null, user);
