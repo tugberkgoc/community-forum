@@ -1,31 +1,35 @@
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const passport = require('passport');
+const express = require('express')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
+const passport = require('passport')
+const cors = require('cors')
 
-require('dotenv').config();
+require('dotenv').config()
 
-const { notFound, errorHandler } = require('./middlewares');
+const { checkAuthHeaderSetUser, checkAuthHeaderSetUserUnAuthorized, notFound, errorHandler} = require('./middlewares')
 
-const auth = require('./auth');
+const auth = require('./auth')
 
-const app = express();
+const app = express()
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(passport.initialize());
+app.use(logger('dev'))
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+app.use(cookieParser())
+app.use(cors())
+app.use(passport.initialize())
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Welcome to Community API!'
-    });
-});
+app.use(checkAuthHeaderSetUser)
 
-app.use('/auth', auth);
+app.get('/', checkAuthHeaderSetUserUnAuthorized, (req, res) => {
+  res.json({
+    message: 'Welcome to Community API!'
+  })
+})
 
-app.use(notFound);
-app.use(errorHandler);
+app.use('/auth', auth)
 
-module.exports = app;
+app.use(notFound)
+app.use(errorHandler)
+
+module.exports = app
