@@ -4,7 +4,7 @@ import Home from './views/Home.vue';
 import LoginToken from './views/LoginToken.vue'
 import Admin from './views/Admin.vue'
 
-import store from './store'
+import store from './store/modules/index'
 
 Vue.use(Router);
 
