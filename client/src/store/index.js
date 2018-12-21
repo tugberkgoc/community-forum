@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import authenticationModule from './authentication/index';
+import authenticationModule from './modules/authentication';
 
 Vue.use(Vuex);
 
