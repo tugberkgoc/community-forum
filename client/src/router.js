@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import LoginToken from './views/LoginToken.vue'
 import Admin from './views/Admin.vue'
+import Test from './views/Test'
 
 import store from './store'
 
@@ -18,14 +19,17 @@ export default new Router({
       component: Home,
     },
     {
+      path: '/test',
+      name: 'Test',
+      component: Test,
+    },
+    {
       path: '/login/token/:token',
-      hash: '#',
       name: 'login-token',
       component: LoginToken,
     },
     {
       path: '/admin',
-      hash: '#',
       name: 'admin',
       component: Admin,
       beforeEnter(to, from, next) {

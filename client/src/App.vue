@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <app-nav></app-nav>
-    <router-view class="container"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
   import {mapActions} from 'vuex'
-  import AppNav from '@/components/AppNav.vue';
+  import AppNav from './components/AppNav.vue';
 
   export default {
     components: {
@@ -18,7 +18,7 @@
     },
     methods: {
       ...mapActions(['login']),
-    }
+    },
   };
 </script>
 
